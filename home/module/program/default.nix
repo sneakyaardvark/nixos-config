@@ -12,5 +12,6 @@
      ./swaylock.nix
      ./waybar.nix
      ./zathura.nix
+     ./direnv.nix
    ];
 }
