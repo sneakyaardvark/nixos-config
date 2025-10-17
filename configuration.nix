@@ -88,7 +88,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
-    boot.kernelPackages.perf
+    config.boot.kernelPackages.perf
   ];
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
       "hplip"
