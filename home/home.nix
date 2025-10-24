@@ -36,6 +36,8 @@
     gdb
     man-pages
     linux-manual
+    # CAD
+    kicad
 
     ripgrep # for nvchad telescope search
 
