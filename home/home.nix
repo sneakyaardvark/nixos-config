@@ -46,6 +46,9 @@
     mediainfo
     kdePackages.skanlite
 
+    # social
+    vesktop
+
     xdg-utils
     smartmontools
     wl-clipboard
