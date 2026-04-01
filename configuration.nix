@@ -98,6 +98,7 @@
   ];
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
       "hplip"
+      "claude-code"
   ];
   
   fonts.packages = with pkgs; [
