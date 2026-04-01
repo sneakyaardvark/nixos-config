@@ -89,16 +89,15 @@
   environment.localBinInPath = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+
   environment.systemPackages = with pkgs; [
     vim
     dnsmasq
     perf
   ];
+
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-      "hplip"
-      "claude-code"
+    "hplip"
   ];
   
   fonts.packages = with pkgs; [
@@ -107,7 +106,6 @@
     liberation_ttf
     fira
     nerd-fonts.fira-code
-    # (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
