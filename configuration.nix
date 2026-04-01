@@ -39,6 +39,8 @@
   ];
   hardware.trackpoint.enable = lib.mkDefault true;
   hardware.trackpoint.emulateWheel = lib.mkDefault config.hardware.trackpoint.enable;
+
+  # services.dnsmasq.enable = true;
   
   networking.hostName = "anixo"; # Define your hostname.
   networking.networkmanager = {
@@ -84,7 +86,7 @@
     extraGroups = [ "wheel" "networkmanager" "video" "audio" "dialout" "libvirtd" "scanner" "lp" ]; # Enable ‘sudo’ for the user.
   };
 
-
+  environment.localBinInPath = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # List packages installed in system profile. To search, run:
@@ -103,6 +105,7 @@
     liberation_ttf
     fira
     nerd-fonts.fira-code
+    dnsmasq
     # (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 
