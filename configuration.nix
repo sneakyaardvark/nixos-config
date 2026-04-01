@@ -66,7 +66,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd sway";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd sway";
         user = "greeter";
       };
     };
@@ -93,7 +93,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
-    config.boot.kernelPackages.perf
+    dnsmasq
+    perf
   ];
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
       "hplip"
@@ -105,7 +106,6 @@
     liberation_ttf
     fira
     nerd-fonts.fira-code
-    dnsmasq
     # (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 

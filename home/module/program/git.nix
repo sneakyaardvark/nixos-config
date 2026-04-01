@@ -1,9 +1,11 @@
 {
   programs.git = {
     enable = true;
-    userEmail = "81195290+sneakyaardvark@users.noreply.github.com";
-    userName = "Sneaky Aardvark";
-    extraConfig = {
+    settings = {
+      user = {
+        email = "81195290+sneakyaardvark@users.noreply.github.com";
+        name = "Andrew Stanton";
+      };
       init = {
         defaultBranch = "main";
       };
@@ -12,7 +14,7 @@
       };
       core = {
         whitespace = "trailing-space,space-before-tab";
-	autocrlf = "input";
+	      autocrlf = "input";
       };
       "credential \"https://github.com\"" = {
         username = "sneakyaardvark";

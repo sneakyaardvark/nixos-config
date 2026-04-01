@@ -3,7 +3,7 @@
 {
   programs.rofi = {
       enable = true;
-      package = pkgs.rofi-wayland;
+      package = pkgs.rofi;
       font = "Fira Sans 12";
       terminal = "${pkgs.foot}/bin/foot";
       extraConfig = {
