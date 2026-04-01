@@ -38,6 +38,11 @@
     linux-manual
     # CAD
     kicad
+    # Python
+    uv
+
+    # office
+    libreoffice
 
     ripgrep # for nvchad telescope search
 
@@ -50,6 +55,7 @@
     vesktop
 
     xdg-utils
+    wl-mirror
     smartmontools
     wl-clipboard
     grim
