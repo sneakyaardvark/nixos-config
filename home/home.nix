@@ -24,6 +24,7 @@
     name = "Vanilla-DMZ";
     size = 25;
   };
+  gtk.gtk4.theme = null;
 
   home.packages = with pkgs; [
     # util

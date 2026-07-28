@@ -9,7 +9,7 @@ in
       main = {
         font = "Fira Code Nerd Font:size=12";
       };
-      colors = {
+      colors-dark = {
         foreground = clr.white;
         background = clr.background;
         regular0 = clr.black;

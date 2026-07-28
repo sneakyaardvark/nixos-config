@@ -10,25 +10,13 @@ let
 in {
    services.swayidle = {
       enable = true;
-      systemdTarget = "sway-session.target";
-      events = [
-        {
-	   event = "before-sleep";
-	   command = lockcmd;
-	}
-	{
-	   event = "lock";
-	   command = lockcmd;
-	}
-	{
-	   event = "unlock";
-	   command = unlockcmd;
-	}
-	{
-	   event = "after-resume";
-	   command = resumecmd;
-	}
-      ];
+      systemdTargets = [ "sway-session.target" ];
+      events = {
+        "before-sleep" = lockcmd;
+        "lock" = lockcmd;
+        "unlock" = unlockcmd;
+        "after-resume" = resumecmd;
+      };
       timeouts = [
         {
 	   timeout = 600; # 10m
