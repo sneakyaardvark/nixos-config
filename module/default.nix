@@ -5,7 +5,6 @@
     ./bluetooth.nix
     ./env.nix
     ./fprint.nix
-    ./light.nix
     ./virtual.nix
     ./fstrim.nix
     ./sane.nix

@@ -89,8 +89,10 @@
   environment.localBinInPath = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  programs.nix-ld.enable = true;
 
   environment.systemPackages = with pkgs; [
+    brightnessctl
     vim
     dnsmasq
     perf

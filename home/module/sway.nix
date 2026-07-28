@@ -33,8 +33,8 @@ in
         "XF86AudioMute" = "exec ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
         "XF86AudioMicMute" = "exec ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
 	# brightness
-        "XF86MonBrightnessUp" = "exec ${pkgs.light}/bin/light -A 5";
-        "XF86MonBrightnessDown" = "exec ${pkgs.light}/bin/light -U 5";
+        "XF86MonBrightnessUp" = "exec ${pkgs.brightnessctl}/bin/brightnessctl set 5%+";
+        "XF86MonBrightnessDown" = "exec ${pkgs.brightnessctl}/bin/brightnessctl set 5%-";
       };
       modes = let cfg = config.wayland.windowManager.sway.config; in {
         resize = {
